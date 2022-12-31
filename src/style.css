@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.grid-template-areas{
+    grid-template-areas: 
+    "sideBar main-content"
+    "now-playing now-playing";
+}
+
+.grid-template-areas #sideBar{
+    grid-area: sideBar;
+}
+
+.grid-template-areas #content{
+    grid-area:main-content;
+}
+
+.grid-template-areas #now-playing{
+    grid-area:now-playing;
+}

@@ -5,8 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../style.css" />
   </head>
-  <body>
-    <h1>Inside Dashboard</h1>
+
+  <body class="h-screen bg-dark text-light">
+    <main
+      class="grid-template-areas grid h-full grid-cols-[250px_1fr] grid-rows-[1fr_auto]"
+    >
+      <aside class="" id="sideBar">Side Navigation bar</aside>
+      <section class="relative overflow-auto bg-transparent" id="content">
+        <header class="bg-transparent px-7 py-5" id="content-nav">
+          <nav class="relative flex justify-end">
+            <button
+              class="flex items-center justify-center gap-x-1 rounded-2xl p-1 px-2 hover:bg-light-dark"
+              id="user-profile-btn"
+            >
+              <section id="display-image">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-7 w-7 rounded-full bg-gray-600"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </section>
+              <section
+                id="display-name"
+                class="flex items-center justify-center gap-x-1"
+              >
+                <h3></h3>
+                <i
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-caret-down-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                    /></svg
+                ></i>
+              </section>
+            </button>
+            <ul
+              id="profileMenu"
+              class="absolute top-9 right-0 hidden w-[200px] rounded-md bg-light-dark p-1"
+            >
+              <li
+                id="logout"
+                class="w-full rounded-sm p-2 hover:cursor-pointer hover:bg-neutral-700"
+              >
+                Logout
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <article
+          id="content-cover"
+          class="absolute top-0 -z-[1] flex h-72 w-full items-center bg-gradient-to-b from-light-dark to-dark-base px-8 py-4 align-middle"
+        >
+          <h1 class="text-4xl">Good Afternoon</h1>
+        </article>
+        <article id="main-content" class="mt-52 bg-dark-base p-4">
+          <header class="px-8">
+            <nav>
+              <ul class="grid grid-cols-[50px_2fr_1fr_1fr_50px] text-gray-300">
+                <li class="justify-self-center">#</li>
+                <li>TITLE</li>
+                <li>ALBUM</li>
+                <li>DATE ADDED</li>
+                <li>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-6 w-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <hr class="mt-2 mb-4 px-6" />
+          <article class="tracks px-8">
+            <section
+              class="track grid grid-cols-[50px_2fr_1fr_1fr_50px] items-center justify-items-start rounded-sm py-2 text-gray-300 hover:bg-light-dark"
+            >
+              <p class="justify-self-center">1</p>
+              <article class="track-title flex">
+                <img src="" alt="kalus" />
+                <section>
+                  <h2 class="text-lg text-light">Fade</h2>
+                  <h3 class="text-sm">Klaus Dead</h3>
+                </section>
+              </article>
+              <p>Repeat Me</p>
+              <p>Apr 1,2021</p>
+              <p>3:39</p>
+            </section>
+            <section
+              class="track grid grid-cols-[50px_2fr_1fr_1fr_50px] items-center justify-center rounded-sm py-2 text-gray-300 hover:bg-light-dark"
+            >
+              <p class="justify-self-center">2</p>
+              <article class="track-title flex">
+                <img src="" alt="kalus" />
+                <section>
+                  <h2 class="text-lg text-light">Fade</h2>
+                  <h3 class="text-sm">Klaus Dead</h3>
+                </section>
+              </article>
+              <p>Repeat Me</p>
+              <p>Apr 1,2021</p>
+              <p>3:39</p>
+            </section>
+          </article>
+        </article>
+      </section>
+      <footer class="" id="now-playing">Now-playing</footer>
+    </main>
+    <script type="module" src="dashboard.js"></script>
   </body>
 </html>
