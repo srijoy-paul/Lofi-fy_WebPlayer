@@ -31,12 +31,4 @@ export const fetchRequest = async (endpoint) => {
     let response = await fetch(url, createAPIConfig(getAcessToken()));
     return response.json();
 }
-
-/*{
-        headers: {
-            Authorization: `${{ accessToken } = getAcessToken()} ${{ tokenType } = getAcessToken()}`
-        }
-    }
-    */
-
 // export const {accessToken}=getAcessToken();

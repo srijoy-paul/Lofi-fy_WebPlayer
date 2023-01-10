@@ -19,3 +19,27 @@
 .grid-template-areas #now-playing{
     grid-area:now-playing;
 }
+
+.track:hover #album,.track:hover #artist-name{
+    color: #fff;
+}
+
+.track:hover .play{
+    visibility: visible;
+}
+
+.track:hover .track_no{
+    visibility: hidden;
+}
+
+.selected{
+    background-color: #535353;
+}
+
+.playing{
+    color: #1DB954;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    color: #1DB954;
+  }
