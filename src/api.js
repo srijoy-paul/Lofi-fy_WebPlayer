@@ -1,6 +1,6 @@
 import { logOut } from "./common";
 
-const BASE_API_URL = import.meta.env.VITE_BASE_URL
+const BASE_API_URL = import.meta.env.VITE_API_BASE_URL
 
 export const getAcessToken = function () {
     const accessToken = localStorage.getItem("access_token");
